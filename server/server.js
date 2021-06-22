@@ -4,6 +4,8 @@ const express = require("express");
 const app = express();
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
+app.set("view engine", "ejs");
+app.use(express.static("public"));
 app.post("/create-checkout-session", async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
@@ -27,4 +29,4 @@ app.post("/create-checkout-session", async (req, res) => {
   res.json({ id: session.id });
 });
 
-app.listen(3000, () => console.log("successfully done, Ricky"));
+app.listen(5000, () => console.log("successfully done, Ricky"));
