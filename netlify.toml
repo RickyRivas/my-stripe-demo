@@ -7,7 +7,3 @@
   publish = "public"
   functions = "functions"
 
-[template.environment]
-  STRIPE_PUBLISHABLE_KEY = "pk_live_51J3aqYCroHKRNssYQXQnikWxzrA8qG1Ngfd2NdkisnzUhrIK7EOymjjErLiK2kUT0vLqTnekCivWDHNmEIv7dAhJ00Ohoe6P3g"
-  STRIPE_SECRET_KEY = "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"
-  STRIPE_WEBHOOK_SECRET = "[Optional] Add your webhook secret here: whsec_xxx"
