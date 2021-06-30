@@ -1,10 +1,10 @@
 [
   {
-    "sku": "DEMO001",
-    "name": "gLoCks",
-    "description": "ammo not included with these market prices!",
-    "image": "",
-    "amount": 10000,
+    "sku": "12345",
+    "name": "Demo Product",
+    "description": "Test Desc. Rivas Websites",
+    "image": "https://unsplash.com/photos/Nyvq2juw4_o",
+    "amount": 100,
     "currency": "USD"
   }
 ]
