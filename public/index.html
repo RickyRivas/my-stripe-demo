@@ -59,19 +59,6 @@
           <h2>Our Products</h2>
           <p>Our current selection isn't final; Stay tuned.</p>
         </div>
-            <!-- Donate -->
-          <div class="productx">
-            <img src="" alt="" />
-            <h2>Donate</h2>
-            <p class="description">Donate to our cause.</p>
-            <p class="price">$5</p>
-            <button id="donate-button checkout-button-price_1J4aLSCroHKRNssY427I23gt" role="link">
-              Donate $5
-            </button>
-
-            <div id="error-message"></div>
-          </div>
-          <!-- Donate -->
         <!-- Products -->
         <section class='products'>
         </section>
@@ -250,43 +237,6 @@
 
     loadProducts();
   </script>
-   <script>
-
-(function() {
-  var stripe = Stripe('pk_live_51J3aqYCroHKRNssYQXQnikWxzrA8qG1Ngfd2NdkisnzUhrIK7EOymjjErLiK2kUT0vLqTnekCivWDHNmEIv7dAhJ00Ohoe6P3g');
-
-  var checkoutButton = document.getElementById('donate-button');
-  checkoutButton.addEventListener('click', function () {
-    /*
-     * When the customer clicks on the button, redirect
-     * them to Checkout.
-     */
-    stripe.redirectToCheckout({
-      lineItems: [{price: 'price_1J4aLSCroHKRNssY427I23gt', quantity: 1}],
-      mode: 'payment',
-      /*
-       * Do not rely on the redirect to the successUrl for fulfilling
-       * purchases, customers may not always reach the success_url after
-       * a successful payment.
-       * Instead use one of the strategies described in
-       * https://stripe.com/docs/payments/checkout/fulfill-orders
-       */
-      successUrl: 'https://www.rivaswebsites.com/success',
-      cancelUrl: 'https://www.rivaswebsites.com/canceled',
-    })
-    .then(function (result) {
-      if (result.error) {
-        /*
-         * If `redirectToCheckout` fails due to a browser or network
-         * error, display the localized error message to your customer.
-         */
-        var displayError = document.getElementById('error-message');
-        displayError.textContent = result.error.message;
-      }
-    });
-  });
-})();
-    </script>
   <script src='scripts/main.js'></script>
 </body>
 
