@@ -10,10 +10,10 @@
     flex-wrap: wrap;
 }
 .products {
-  display: grid;
-  place-items: center;
-  gap: 2rem;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .product {
   width: 100%;
@@ -59,10 +59,4 @@
   opacity: 0.5;
   cursor: not-allowed;
 
-}
-@media (max-width: 1024px){
-.products{
-grid-template-columns: minmax(100%, 450px);
-grid-template-rows: auto 1fr;
-}
 }
