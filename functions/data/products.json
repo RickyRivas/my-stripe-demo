@@ -3,7 +3,7 @@
     "sku": "12345",
     "name": "Demo Product",
     "description": "Test Desc. Rivas Websites",
-    "image": "",
+    "image": "123",
     "amount": 100,
     "currency": "USD"
   }
