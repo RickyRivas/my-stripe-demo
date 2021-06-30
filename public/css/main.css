@@ -646,11 +646,6 @@ nav {
     margin: auto;
     max-width: 1100px;
     height: 100%;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    background: transparent;
   }
   .landing-heading {
     text-align: center;
