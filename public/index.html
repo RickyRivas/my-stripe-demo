@@ -1,125 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stripe Checkout Rivas Websites Example</title>
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
-    <header>
-      <a href="/" rel="home">Rivas Websites Stripe Integration</a>
-    </header>
 
-    <main>
-      <h1>What We Sell</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Welcome to Rivas Websites! We create websites by hand and manage them for our clients for an affordable price." />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <!-- Animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- Styles -->
+  <link href="css/main.css" rel="stylesheet" />
+  <!-- Title -->
+  <title>E-Tienda Rivas</title>
+</head>
 
-      <section class="products"></section>
-    </main>
-    <!-- x -->
-
-    <!-- X -->
-    <template id="product">
-      <div class="product">
-        <img src="" alt="" />
-        <h2>name</h2>
-        <p class="description">description</p>
-        <p class="price">price</p>
-        <form action="/.netlify/functions/create-checkout" method="post">
-          <label for="quantity">Quantity</label>
-          <input
-            type="number"
-            id="quantity"
-            name="quantity"
-            value="1"
-            min="1"
-            max="10"
-          />
-          <input type="hidden" name="sku" value="" />
-          <button type="submit">Buy Now</button>
-        </form>
+<body>
+  <!-- Navigation Start -->
+  <nav>
+    <div class="logo">
+      <h1>Tienda Rivas</h1>
+    </div>
+    <div class="links-wrapper">
+      <ul class="nav-links">
+        <li class="nav-link"><a href="index.html">Home</a></li>
+        <li class="nav-link"><a href="#">Services</a></li>
+        <li class="nav-link"><a href="#portfolio">Portfolio</a></li>
+        <li class="nav-link"><a href="#">Blog</a></li>
+        <li class="nav-link"><a href="#">About</a></li>
+      </ul>
+    </div>
+    <button class="hamburger hamburger--spring" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+  </nav>
+  <!-- Navigation End -->
+  <main>
+    <!-- Main Start -->
+    <!-- Landing Start -->
+    <div class='landing-section'>
+      <div class='landing-container'>
+        <h1>Tienda Rivas</h1>
       </div>
-    </template>
+    </div>
+    <!-- Landing End -->
+    <section class="products"></section>
+    <!-- FOOTER START -->
+    <div class="footer">
+      <div class="contain">
+        <div class="col">
+          <h1>Rivas Websites</h1>
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Products</li>
+            <li>Request Quote</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h1>Services</h1>
+          <ul>
+            <li>Designs</li>
+            <li>SEO</li>
+            <li>Web Design</li>
+            <li>Web Development</li>
+            <li>Photography</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h1>Resources</h1>
+          <ul>
+            <li>Time</li>
+            <li>Google Ads</li>
+            <li>Information</li>
+            <li>Site map</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h1>Support</h1>
+          <ul>
+            <li>Contact us</li>
+            <li>View</li>
+            <li>Open ticket</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h1>Staff</h1>
+          <ul>
+            <li>Contact us</li>
+            <li>Owner</li>
+            <li>Staff</li>
+          </ul>
+        </div>
+        <div class="col social">
+          <h1>Social</h1>
+          <ul>
+            <li>
+              <img alt="Instagram Icon" class="standard-icon" src="images/facebook.svg" />
+            </li>
+            <li>
+              <img alt="Facebook icon" class="standard-icon" src="images/instagram.svg" />
+            </li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="credit">
+        <p>
+          Developed by <a href="https://rivaswebsites.com/">RWebsites, LLC</a>
+        </p>
+      </div>
+    </div>
+    <!-- END OF FOOTER -->
+    <!-- Main End-->
+  </main>
+  <!------------------->
+  <!-- SCRIPTS START -->
+  <!------------------->
+  <template id="product">
+    <div class="product">
+      <img src="" alt="" />
+      <h2>name</h2>
+      <p class="description">description</p>
+      <p class="price">price</p>
+      <form action="/.netlify/functions/create-checkout" method="post">
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" name="quantity" value="1" min="1" max="10" />
+        <input type="hidden" name="sku" value="" />
+        <button type="submit">Buy Now</button>
+      </form>
+    </div>
+  </template>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script>
+    function format(amount, currency) {
+      return new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency,
+      }).format((amount / 100).toFixed(2));
+    }
 
-    <script src="https://js.stripe.com/v3/"></script>
-    <script>
-      function format(amount, currency) {
-        return new Intl.NumberFormat("en-US", {
-          style: "currency",
-          currency,
-        }).format((amount / 100).toFixed(2));
-      }
+    async function handleSubmit(event) {
+      event.preventDefault();
+      document
+        .querySelectorAll("button")
+        .forEach((button) => (button.disabled = true));
 
-      async function handleSubmit(event) {
-        event.preventDefault();
+      const form = new FormData(event.target);
+      const data = {
+        sku: form.get("sku"),
+        quantity: Number(form.get("quantity")),
+      };
+
+      const response = await fetch("/.netlify/functions/create-checkout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }).then((res) => res.json());
+
+      const stripe = Stripe(response.publishableKey);
+      const {
+        error
+      } = await stripe.redirectToCheckout({
+        sessionId: response.sessionId,
+      });
+
+      if (error) {
         document
           .querySelectorAll("button")
-          .forEach((button) => (button.disabled = true));
+          .forEach((button) => (button.disabled = false));
+        console.error(error);
+      }
+    }
 
-        const form = new FormData(event.target);
-        const data = {
-          sku: form.get("sku"),
-          quantity: Number(form.get("quantity")),
-        };
-
-        const response = await fetch("/.netlify/functions/create-checkout", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        }).then((res) => res.json());
-
-        const stripe = Stripe(response.publishableKey);
-        const { error } = await stripe.redirectToCheckout({
-          sessionId: response.sessionId,
-        });
-
-        if (error) {
-          document
-            .querySelectorAll("button")
-            .forEach((button) => (button.disabled = false));
-          console.error(error);
-        }
+    async function loadProducts() {
+      if (!"content" in document.createElement("template")) {
+        console.error("Your browser doesn’t support HTML template elements.");
+        return;
       }
 
-      async function loadProducts() {
-        if (!"content" in document.createElement("template")) {
-          console.error("Your browser doesn’t support HTML template elements.");
-          return;
-        }
+      const data = await fetch("/.netlify/functions/get-products")
+        .then((res) => res.json())
+        .catch((err) => console.error(err));
 
-        const data = await fetch("/.netlify/functions/get-products")
-          .then((res) => res.json())
-          .catch((err) => console.error(err));
+      const products = document.querySelector(".products");
+      const template = document.querySelector("#product");
 
-        const products = document.querySelector(".products");
-        const template = document.querySelector("#product");
+      data.forEach((product) => {
+        const container = template.content.cloneNode(true);
 
-        data.forEach((product) => {
-          const container = template.content.cloneNode(true);
+        container.querySelector("h2").innerText = product.name;
+        container.querySelector(".description").innerText =
+          product.description;
+        container.querySelector(".price").innerText = format(
+          product.amount,
+          product.currency
+        );
+        container.querySelector("[name=sku]").value = product.sku;
 
-          container.querySelector("h2").innerText = product.name;
-          container.querySelector(".description").innerText =
-            product.description;
-          container.querySelector(".price").innerText = format(
-            product.amount,
-            product.currency
-          );
-          container.querySelector("[name=sku]").value = product.sku;
+        const img = container.querySelector("img");
+        img.src = product.image;
+        img.alt = product.name;
 
-          const img = container.querySelector("img");
-          img.src = product.image;
-          img.alt = product.name;
+        const form = container.querySelector("form");
+        form.addEventListener("submit", handleSubmit);
 
-          const form = container.querySelector("form");
-          form.addEventListener("submit", handleSubmit);
+        products.appendChild(container);
+      });
+    }
 
-          products.appendChild(container);
-        });
-      }
+    loadProducts();
+  </script>
+  <script src='scripts/main.js'></script>
+</body>
 
-      loadProducts();
-    </script>
-  </body>
 </html>
