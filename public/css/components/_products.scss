@@ -4,6 +4,10 @@
 .products-container{
     max-width: 1200px;
     padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .products {
   display: grid;
