@@ -640,6 +640,7 @@ nav {
     width: 100%;
     height: calc((100vw / 1.8) - 88px);
     position: relative;
+    background-color: #f8f9fa;
   }
   .landing-container {
     margin: auto;
