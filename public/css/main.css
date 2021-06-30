@@ -594,6 +594,11 @@ nav {
   padding: 0.25rem;
 }
 
+.product button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 /* Main Container CSS */
 #main-container {
   padding: 0;
