@@ -61,51 +61,7 @@ width: 100%;
   opacity: 0.5;
   cursor: not-allowed;
 }
-//product x
-.productx{
-  width: 100%;
-  max-width: 450px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
- 
- .productx img {
-   max-width: 100%;
- }
- 
- .productx form {
-   align-items: baseline;
-   display: grid;
-   gap: 0.5rem;
-   grid-template-columns: 70px 50px 1fr;
- }
- 
- .productx input {
-   border: 1px solid teal;
-   border-radius: 0.25rem;
-   font-size: 1.125rem;
-   line-height: 1.25rem;
-   padding: 0.25rem;
- }
- 
- .productx button {
-   background: teal;
-   border: none;
-   border-radius: 0.25rem;
-   color: white;
-   font-size: 1.25rem;
-   font-weight: 800;
-   line-height: 1.25rem;
-   padding: 0.25rem;
- }
 
-.productx button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
 @media (max-width: 1024px){
   .products{
     flex-direction: column;
