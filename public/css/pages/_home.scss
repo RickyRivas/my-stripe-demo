@@ -106,7 +106,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     color: $charlestongreen;
     margin-top: 3em;
     & h1 {
@@ -146,5 +146,8 @@
     margin: auto;
     height: 100vh;
     border: 0;
+  }
+  .landing-heading{
+      text-align: center;
   }
 }

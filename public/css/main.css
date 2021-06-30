@@ -674,9 +674,9 @@ nav {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     color: #212529;
     margin-top: 3em;
   }
@@ -723,6 +723,9 @@ nav {
     margin: auto;
     height: 100vh;
     border: 0;
+  }
+  .landing-heading {
+    text-align: center;
   }
 }
 /*# sourceMappingURL=main.css.map */
