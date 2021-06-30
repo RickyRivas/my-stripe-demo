@@ -528,6 +528,54 @@ nav {
   cursor: pointer;
 }
 
+.products {
+  display: -ms-grid;
+  display: grid;
+  gap: 2rem;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  margin-top: 3rem;
+}
+
+.product img {
+  max-width: 100%;
+}
+
+.product form {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  display: -ms-grid;
+  display: grid;
+  gap: 0.5rem;
+  -ms-grid-columns: 70px 50px 1fr;
+      grid-template-columns: 70px 50px 1fr;
+}
+
+.product input {
+  border: 1px solid teal;
+  border-radius: 0.25rem;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  padding: 0.25rem;
+}
+
+.product button {
+  background: teal;
+  border: none;
+  border-radius: 0.25rem;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.25rem;
+  padding: 0.25rem;
+}
+
+.product button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 /* Main Container CSS */
 #main-container {
   padding: 0;
