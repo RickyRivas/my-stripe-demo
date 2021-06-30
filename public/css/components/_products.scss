@@ -48,4 +48,11 @@
 .product button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+
+}
+@media (max-width: 1024px){
+.products{
+grid-template-columns: minmax(100%, 450px);
+grid-template-rows: auto 1fr;
+}
 }

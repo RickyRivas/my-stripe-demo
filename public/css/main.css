@@ -596,6 +596,15 @@ nav {
   cursor: not-allowed;
 }
 
+@media (max-width: 1024px) {
+  .products {
+    -ms-grid-columns: minmax(100%, 450px);
+        grid-template-columns: minmax(100%, 450px);
+    -ms-grid-rows: auto 1fr;
+        grid-template-rows: auto 1fr;
+  }
+}
+
 /* Main Container CSS */
 #main-container {
   padding: 0;
