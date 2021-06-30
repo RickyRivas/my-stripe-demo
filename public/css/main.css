@@ -528,13 +528,21 @@ nav {
   cursor: pointer;
 }
 
+.products-section {
+  width: 100%;
+}
+
+.products-container {
+  max-width: 1200px;
+  padding: 1em;
+}
+
 .products {
   display: -ms-grid;
   display: grid;
   gap: 2rem;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  margin-top: 3rem;
 }
 
 .product img {
