@@ -49,10 +49,6 @@ html {
 }
 
 /* Navigation Scss */
-body {
-  background-color: #fff;
-}
-
 nav {
   z-index: 1000;
   position: absolute;
