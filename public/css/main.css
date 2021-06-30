@@ -571,12 +571,16 @@ nav {
 }
 
 .products {
-  display: -ms-grid;
-  display: grid;
-  gap: 2rem;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  margin-top: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .product img {
@@ -620,10 +624,10 @@ nav {
 
 @media (max-width: 1024px) {
   .products {
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
-    -ms-grid-rows: minmax(100%, 450px);
-        grid-template-rows: minmax(100%, 450px);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
