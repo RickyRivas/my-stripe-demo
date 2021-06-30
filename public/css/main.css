@@ -551,6 +551,25 @@ nav {
   margin: auto;
 }
 
+.product {
+  width: 100%;
+  max-width: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 .products {
   display: -ms-grid;
   display: grid;
@@ -597,6 +616,15 @@ nav {
 .product button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+@media (max-width: 1024px) {
+  .products {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: minmax(100%, 450px);
+        grid-template-rows: minmax(100%, 450px);
+  }
 }
 
 /* Main Container CSS */

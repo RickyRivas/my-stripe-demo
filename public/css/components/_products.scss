@@ -10,6 +10,15 @@
     flex-direction: column;
     margin: auto;
 }
+.product{
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
 .products {
    display: grid;
    gap: 2rem;
@@ -50,4 +59,10 @@
 .product button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+@media (max-width: 1024px){
+  .products{
+    grid-template-columns: auto;
+    grid-template-rows: minmax(100%, 450px);
+  }
 }
