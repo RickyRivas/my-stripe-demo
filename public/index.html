@@ -5,12 +5,11 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Store Demo Managed by R Websites, LLC" />
+  <meta name="description" content="Store Demo Managed by R Websites, LLC" />
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=PlayfairDisplay&display=swap" rel="stylesheet">
   <!-- Animations -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <!-- Styles -->
@@ -23,7 +22,7 @@
   <!-- Navigation Start -->
   <nav>
     <div class="logo">
-     <!--<h1>Tienda Rivas</h1>-->
+      <!--<h1>Tienda Rivas</h1>-->
     </div>
     <div class="links-wrapper">
       <ul class="nav-links">
@@ -47,9 +46,9 @@
     <div class='landing-section'>
       <div class='landing-container'>
         <div class='landing-heading'>
-           <h1>Tienda Rivas</h1>
-           <p>Demo Store Created and Managed by R Websites, LLC</p>
-        </div>    
+          <h1>Tienda Rivas</h1>
+          <p>Demo Store Created and Managed by R Websites, LLC</p>
+        </div>
       </div>
     </div>
     <!-- Landing End -->
@@ -61,7 +60,21 @@
           <p>Our current selection isn't final; Stay tuned.</p>
         </div>
         <!-- Products -->
-       <section class='products'></section>
+        <section class='products'>
+          <!-- Donate -->
+          <div class="product">
+            <img src="" alt="" />
+            <h2>Donate</h2>
+            <p class="description">Donate to our cause.</p>
+            <p class="price">$5</p>
+            <button id="donate-button" role="link">
+              Donate $5
+            </button>
+
+            <div id="error-message"></div>
+          </div>
+          <!-- Donate -->
+        </section>
         <!-- Products -->
       </div>
     </section>
@@ -237,6 +250,42 @@
 
     loadProducts();
   </script>
+   <script>
+
+(function() {
+
+  var checkoutButton = document.getElementById('donate-button');
+  checkoutButton.addEventListener('click', function () {
+    /*
+     * When the customer clicks on the button, redirect
+     * them to Checkout.
+     */
+    stripe.redirectToCheckout({
+      lineItems: [{price: 'price_1J4aLSCroHKRNssY427I23gt', quantity: 1}],
+      mode: 'payment',
+      /*
+       * Do not rely on the redirect to the successUrl for fulfilling
+       * purchases, customers may not always reach the success_url after
+       * a successful payment.
+       * Instead use one of the strategies described in
+       * https://stripe.com/docs/payments/checkout/fulfill-orders
+       */
+      successUrl: 'https://www.rivaswebsites.com/success',
+      cancelUrl: 'https://www.rivaswebsites.com/canceled',
+    })
+    .then(function (result) {
+      if (result.error) {
+        /*
+         * If `redirectToCheckout` fails due to a browser or network
+         * error, display the localized error message to your customer.
+         */
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+    </script>
   <script src='scripts/main.js'></script>
 </body>
 
