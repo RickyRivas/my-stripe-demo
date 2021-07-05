@@ -561,6 +561,11 @@ nav {
             flex-direction: column;
     margin: auto;
   }
+  .products-container .heading {
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 1em;
+  }
   .product {
     width: 100%;
     max-width: 450px;
@@ -584,16 +589,21 @@ nav {
     padding: .2em 0;
   }
   .product .description {
-    padding: .2em 0 .1em 0;
+    padding: .2em;
   }
   .product .price {
     font-size: 1.4em;
     font-weight: 700;
+    margin-bottom: .5em;
   }
-  .productform {
+  .product .form {
     padding: .5em;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .product .form button {
+    background-color: #0aefff;
+    color: black;
   }
   .products {
     display: -webkit-box;
