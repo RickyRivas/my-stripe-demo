@@ -623,6 +623,7 @@ nav {
     -ms-grid-rows: max-content;
         grid-template-rows: -webkit-max-content;
         grid-template-rows: max-content;
+    grid-row-gap: 1em;
   }
   .product img {
     max-width: 100%;
