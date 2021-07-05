@@ -578,6 +578,22 @@ nav {
             flex-direction: column;
     -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: .5em;
+  }
+  .product h2 {
+    padding: .2em 0;
+  }
+  .product .description {
+    padding: .2em 0 .1em 0;
+  }
+  .product .price {
+    font-size: 1.4em;
+    font-weight: 700;
+  }
+  .productform {
+    padding: .5em;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
   }
   .products {
     display: -webkit-box;

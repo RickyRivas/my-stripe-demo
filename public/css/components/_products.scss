@@ -21,7 +21,23 @@
     align-items: center;
     flex-direction: column;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  }
+    border-radius: .5em;
+    & h2{
+      padding: .2em 0;
+    }
+    & .description{
+      padding: .2em 0 .1em 0;
+    }
+    & .price{
+      font-size: 1.4em;
+      font-weight: 700;
+    }
+    &form {
+      padding: .5em;
+      width: 100%;
+      background-color: rgba(0,0,0,.3);
+    }
+  }  
 
   .products {
     display: flex;
