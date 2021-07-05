@@ -6,5 +6,13 @@
     "image": "https://drive.google.com/uc?export=view&id=1VVqbduM0woD70YOMfCdbL1hvSiaieBb0",
     "amount": 100,
     "currency": "USD"
+  },
+    {
+    "sku": "12345",
+    "name": "Iphone XS MAx",
+    "description": "Upgrade away from Android and purchase the Iphone XS Max.",
+    "image": "https://drive.google.com/uc?export=view&id=1W-ZKpaKtTwk32N94WfPfuBa0hpHLQGx1",
+    "amount": 100,
+    "currency": "USD"
   }
 ]
