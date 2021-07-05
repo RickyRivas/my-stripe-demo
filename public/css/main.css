@@ -589,7 +589,8 @@ nav {
     padding: .2em 0;
   }
   .product .description {
-    padding: .2em;
+    padding: 1em;
+    text-align: center;
   }
   .product .price {
     font-size: 1.4em;
