@@ -6,10 +6,3 @@
 [dev]
   publish = "public"
   functions = "functions"
-
-[template.environment]
-  STRIPE_PUBLISHABLE_KEY = "pk_live_51J3aqYCroHKRNssYQXQnikWxzrA8qG1Ngfd2NdkisnzUhrIK7EOymjjErLiK2kUT0vLqTnekCivWDHNmEIv7dAhJ00Ohoe6P3g"
-  STRIPE_SECRET_KEY = "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"
-  STRIPE_WEBHOOK_SECRET = "whsec_cn2Kc7WeLQIknNN44Rpy5cKA3idpShnP
-
-"
