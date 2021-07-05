@@ -533,108 +533,100 @@ nav {
   height: 2em;
 }
 
-.products-section {
-  width: 100%;
+.btn {
+  border: 0;
+  padding: .5em 2em;
+  margin-top: .5em;
+  border-radius: .5em;
 }
 
-.products-container {
-  max-width: 1200px;
-  padding: 1em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: auto;
-}
-
-.product {
-  width: 100%;
-  max-width: 450px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-.products {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 100%;
-}
-
-.product img {
-  max-width: 100%;
-}
-
-.product form {
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  display: -ms-grid;
-  display: grid;
-  gap: 0.5rem;
-  -ms-grid-columns: 70px 50px 1fr;
-      grid-template-columns: 70px 50px 1fr;
-}
-
-.product input {
-  border: 1px solid teal;
-  border-radius: 0.25rem;
-  font-size: 1.125rem;
-  line-height: 1.25rem;
-  padding: 0.25rem;
-}
-
-.product button {
-  background: teal;
-  border: none;
-  border-radius: 0.25rem;
-  color: white;
-  font-size: 1.25rem;
-  font-weight: 800;
-  line-height: 1.25rem;
-  padding: 0.25rem;
-}
-
-.product button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-@media (max-width: 1024px) {
-  .products {
+@media (min-width: 0px) {
+  .products-section {
+    width: 100%;
+  }
+  .products-container {
+    max-width: 1200px;
+    padding: 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin: auto;
+  }
+  .product {
+    width: 100%;
+    max-width: 450px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  .products {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+  }
+  .product img {
+    max-width: 100%;
+  }
+  .product form {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    display: -ms-grid;
+    display: grid;
+    gap: 0.5rem;
+    -ms-grid-columns: 70px 50px 1fr;
+        grid-template-columns: 70px 50px 1fr;
+  }
+  .product input {
+    border: 1px solid teal;
+    border-radius: 0.25rem;
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+    padding: 0.25rem;
+  }
+  .product button {
+    background: teal;
+    border: none;
+    border-radius: 0.25rem;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 1.25rem;
+    padding: 0.25rem;
+  }
+  .product button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 }
 
